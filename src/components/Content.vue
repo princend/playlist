@@ -44,7 +44,10 @@ const url = 'https://www.google.com'
     <a v-bind:href="url">Google</a>
     <input type="text" placeholder="请输入歌曲名称" class="searh" v-model="search"   />
     <ul>
-        <li v-for="item in filteredPlayList" :key="item.name">
+        <p v-if="filteredPlayList.length === 0"> 沒有找到歌曲 </p>
+        <li v-for="item in filteredPlayList" :key="item.name" v-else>
+
+
             <input type="checkbox" v-model="item.complete" />
             <span>{{ item.name }}</span>
             <!-- <span>{{ item.singer }}</span>
