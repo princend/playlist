@@ -16,11 +16,12 @@ const divStyle = computed(()=>
     })
 
 )
+const divClass=computed(()=>gender.value);
 </script>
 
 <template>
     <form @submit.prevent="submitEvent">
-        <div :style="divStyle">
+        <div :style="divStyle" :class="divClass">
             <label for="username">用戶名</label>
             <input type="text" id="username" v-model="username">
             <br>
