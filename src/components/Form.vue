@@ -12,7 +12,7 @@ const handleInput = (e: { target: { value: any; }; }) => {
 <template>
     <div>
         <label for="username">用戶名</label>
-        <input type="text" id="username" @input="handleInput">
+        <input type="text" id="username" v-model="username">
     </div>
     <div>
         <p style="color: blueviolet;">您輸入的用戶名是:{{ username }}</p>
