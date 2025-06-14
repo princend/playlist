@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 let showAnswer = ref(false);
+const label = computed(() => {
+   return  showAnswer.value ? '隱藏答案' : '顯示答案'
+})
 
 </script>
 
@@ -11,11 +14,8 @@ let showAnswer = ref(false);
         <p v-show="showAnswer">vue是一套用於建構用戶介面的漸進式框架</p>
 
         <button @click="showAnswer = !showAnswer">
-            <span v-if="!showAnswer">
-                顯示答案
-            </span>
-            <span v-else>
-                隱藏答案
+            <span>
+                {{ label }}
             </span>
         </button>
     </div>
