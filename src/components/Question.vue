@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 let showAnswer = ref(false);
 const label = computed(() => {
@@ -8,6 +8,9 @@ const label = computed(() => {
 
 const toggleAnswer= ()=>{showAnswer.value=!showAnswer.value};
 
+watch(showAnswer, (newVal, oldVal) => {
+  console.log('showAnswer 變了，新的值：', newVal, '舊的值：', oldVal);
+});
 </script>
 
 <template>
