@@ -36,12 +36,14 @@ const filteredPlayList = computed(() => {
 })
 
 const url = 'https://www.google.com'
+let showAnswer=ref(false);
 
 </script>
 
 <template>
+    <button v-on:click="showAnswer= !showAnswer">按鈕</button>
+    <p v-show="showAnswer">安安</p>
     <h1>播放列表</h1>
-    <a v-bind:href="url">Google</a>
     <input type="text" placeholder="请输入歌曲名称" class="searh" v-model="search"   />
     <ul>
         <p v-if="filteredPlayList.length === 0"> 沒有找到歌曲 </p>

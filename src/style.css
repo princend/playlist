@@ -131,3 +131,9 @@ body {
 #app ul li {
   margin-bottom: 24px;
 }
+
+
+.question{
+  font: italic;
+  color: #535bf2;
+}

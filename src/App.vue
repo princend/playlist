@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue'
 import Content from './components/Content.vue'
+import Question from './components/Question.vue';
 </script>
 
 <template>
@@ -13,7 +14,8 @@ import Content from './components/Content.vue'
     </a>
   </div> -->
   <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <Content />
+  <!-- <Content /> -->
+  <Question />
 </template>
 
 <style scoped>
