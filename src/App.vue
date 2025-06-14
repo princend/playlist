@@ -2,6 +2,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Content from './components/Content.vue'
 import Question from './components/Question.vue';
+import  Form  from "./components/Form.vue";
 </script>
 
 <template>
@@ -15,7 +16,8 @@ import Question from './components/Question.vue';
   </div> -->
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <!-- <Content /> -->
-  <Question />
+  <!-- <Question /> -->
+   <Form/>
 </template>
 
 <style scoped>
