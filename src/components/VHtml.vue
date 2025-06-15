@@ -8,6 +8,9 @@ const list = ref([1, 2, 3])
 const appendValue = computed(()=>{
      list.value.push(list.value.length+1)
 })
+
+const attr =ref('placeholder')
+const value =ref('test')
 </script>
 <template>
     <div class="text-blue">
@@ -15,6 +18,8 @@ const appendValue = computed(()=>{
         <p v-once>list 初始長度 {{ list.length }}</p>
         <button @click="() => appendValue"> 增加列表</button>
         <div>list:{{ list }}</div>
+
+        <input type="text" name="" id=" " :[attr]="value">
         
     </div>
 </template>
