@@ -19,7 +19,7 @@ import VHtml from './components/VHtml.vue';
   <!-- <Content /> -->
   <!-- <Question /> -->
   <!-- <Form/> -->
-  <VHtml />
+  <VHtml title="標題" content="<p>hi~~</p>"/>
 </template>
 
 <style scoped>
