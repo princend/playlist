@@ -4,6 +4,10 @@ import Content from './components/Content.vue'
 import Question from './components/Question.vue';
 import Form from "./components/Form.vue";
 import VHtml from './components/VHtml.vue';  
+
+function onAdd(value: number) {
+  console.log('子組件傳來的值:', value)
+}
 </script>
 
 <template>
@@ -19,7 +23,7 @@ import VHtml from './components/VHtml.vue';
   <!-- <Content /> -->
   <!-- <Question /> -->
   <!-- <Form/> -->
-  <VHtml title="標題" content="<p>hi~~</p>"/>
+  <VHtml title="標題" content="<p>hi~~</p>" @add="onAdd"/>
 </template>
 
 <style scoped>
