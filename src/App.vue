@@ -4,10 +4,12 @@ import Content from './components/Content.vue'
 import Question from './components/Question.vue';
 import Form from "./components/Form.vue";
 import VHtml from './components/VHtml.vue';  
+import SearchInput from './components/SearchInput.vue';
 
 function onAdd(value: number) {
   console.log('子組件傳來的值:', value)
 }
+const a= '安安';
 </script>
 
 <template>
@@ -24,6 +26,7 @@ function onAdd(value: number) {
   <!-- <Question /> -->
   <!-- <Form/> -->
   <VHtml title="標題" content="<p>hi~~</p>" @add="onAdd"/>
+  <SearchInput v-model="a"></SearchInput>
 </template>
 
 <style scoped>
